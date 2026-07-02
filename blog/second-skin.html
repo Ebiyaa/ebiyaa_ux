@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Second Skin | Interactive Art Installation Case Study</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              "background-light": "#FFFFFF",
+              "background-dark": "#121212",
+              "sidebar-gray": "#F4F4F5",
+            },
+            fontFamily: {
+              sans: ["Geist", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "4px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Geist', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      @media (min-width: 768px) {
+        .sticky-sidebar {
+          position: sticky;
+          top: 80px;
+          height: calc(100vh - 80px);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-zinc-900 dark:text-zinc-100 transition-colors duration-200"
+  >
+
+  <!-- nav -->
+    <nav
+      class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800"
+    >
+      <div
+        class="max-w-full mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <a href="/index.html">
+          <img
+            src="../assets/logo.png"
+            alt="Logo"
+            class="h-8"
+          />
+        </a>
+        <div class="hidden md:flex items-center space-x-12 text-sm font-medium">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About me</a>
+          <a href="/reflections.html">Reflections</a>
+        </div>
+        <button
+          class="bg-primary text-white dark:bg-zinc-100 dark:text-black px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+        >
+          Let's talk
+        </button>
+      </div>
+    </nav>
+
+    <!-- body -->
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+      <main class="flex-1 p-8 md:p-16 md:px-24">
+        <div class="max-w-5xl mx-auto md:mx-0">
+          <a
+            class="inline-flex items-center text-sm font-medium mb-12 hover:opacity-60 transition-opacity"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-lg mr-1"
+              >arrow_back</span
+            >
+            Back
+          </a>
+
+          <div>
+            <h1 class="text-4xl md:text-6xl leading-tight mb-8">
+              Second Skin <br />
+              Interactive Art Installation
+            </h1>
+            <p
+              class="text-lg md:text-xl text-zinc-500 dark:text-zinc-400 italic leading-relaxed"
+            >
+              “What I do and what I touch has an impact on the environment”
+            </p>
+          </div>
+
+          <div
+            class="w-full aspect-[16/9] bg-zinc-100 dark:bg-zinc-800 rounded-lg mb-20 overflow-hidden flex items-center justify-center"
+          >
+            <span class="text-zinc-400 dark:text-zinc-600 font-medium"
+              >Project Hero Image</span
+            >
+          </div>
+          <section class="mb-24">
+            <h2
+              class="text-sm font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8"
+            >
+              Introduction
+            </h2>
+            <div
+              class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed"
+            >
+              <p>
+                In public spaces, emotions are often hidden, muted, or ignored.
+                Second Skin explores how our inner states influence the people
+                and environments around us, even when no words are spoken. This
+                art installation reimagines clothing not as decoration, but as a
+                responsive medium of emotional communication.
+              </p>
+              <p>
+                The installation consists of two interconnected dresses made out
+                of recycled plastic. One dress is worn by a participant, while
+                the other stands on a mannequin in a shared exhibition space.
+                Through smart sensors, the participant's emotions can be
+                expressed with different light colours on the mannequin's dress.
+                When visitors touch the mannequin, the corresponding areas on
+                the human-worn dress illuminate in real time, translating
+                anonymous touch into visible light.
+              </p>
+              <p>
+                This indirect exchange creates a moment of emotional
+                interdependence between unfamiliar bodies. It invites reflection
+                on how seemingly small or anonymous actions can affect another
+                person's emotional state. Second Skin is not a product, but an
+                experience designed to ask people to slow down and feel before
+                they think.
+              </p>
+            </div>
+          </section>
+          <div
+            class="w-full aspect-[16/7] bg-zinc-100 dark:bg-zinc-800 rounded-lg mb-24 flex items-center justify-center"
+          >
+            <span class="text-zinc-400 dark:text-zinc-600 font-medium"
+              >Installation Setup Gallery</span
+            >
+          </div>
+          <section class="mb-24">
+            <h2
+              class="text-sm font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8"
+            >
+              Sustainable Development Goals (SDG)
+            </h2>
+            <div
+              class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed"
+            >
+              <p>
+                Second Skin primarily aligns with SDG 3: Good Health and
+                Well-being, as it foregrounds emotional awareness, empathy, and
+                non-verbal connection. By externalising emotional and physical
+                interaction through light, the installation encourages
+                reflection on care, sensitivity, and mental well-being in shared
+                spaces.
+              </p>
+              <p>
+                The project also supports SDG 12: Responsible Consumption and
+                Production. The dresses are constructed from recycled plastic
+                materials, challenging the perception of waste and transforming
+                discarded material into an emotionally responsive artefact.
+              </p>
+            </div>
+          </section>
+          <section class="mb-24">
+            <h2
+              class="text-sm font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8"
+            >
+              Technology
+            </h2>
+            <div
+              class="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed"
+            >
+              <p>
+                The dress worn by the human participant integrates a set of
+                biosensors designed to capture subtle physiological signals
+                associated with emotional arousal, such as heart rate
+                variability and galvanic skin responses. These bio signals are
+                then translated into emotions and visually reflected via the LED
+                system in the other dress.
+              </p>
+              <p>
+                Each dress functions as both transmitter and receiver within a
+                Bluetooth Low Energy (BLE) network. When the human-worn dress
+                detects a significant shift in bio signals, it transmits a coded
+                emotional state to the other dress.
+              </p>
+            </div>
+          </section>
+          <div
+            class="w-full aspect-[16/9] bg-zinc-100 dark:bg-zinc-800 rounded-lg mb-24 flex items-center justify-center"
+          >
+            <span class="text-zinc-400 dark:text-zinc-600 font-medium"
+              >Technical Implementation Details</span
+            >
+          </div>
+          <section class="mb-24">
+            <h2
+              class="text-sm font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-8"
+            >
+              Rules of Interaction
+            </h2>
+            <div
+              class="space-y-12 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                  <h3
+                    class="text-zinc-900 dark:text-zinc-100 font-semibold mb-6"
+                  >
+                    Inputs
+                  </h3>
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <span class="mr-3 text-zinc-400 font-bold">•</span>
+                      Physical touch on the mannequin's dress.
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-3 text-zinc-400 font-bold">•</span>
+                      Human wearer's physiological signal changes.
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-3 text-zinc-400 font-bold">•</span>
+                      Touch pressure mapped to light intensity.
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-3 text-zinc-400 font-bold">•</span>
+                      Sensor data transmitted through Bluetooth.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3
+                    class="text-zinc-900 dark:text-zinc-100 font-semibold mb-6"
+                  >
+                    Output (LED on Dresses):
+                  </h3>
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <span class="mr-3 text-zinc-400 font-bold">•</span>
+                      Glows brighter with firmer touch, soft glow for light
+                      touch.
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-3 text-zinc-400 font-bold">•</span>
+                      Warmer colours for high emotional arousal, cooler tones
+                      for calmer states (Blue for sadness, red for anger).
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="pt-8 border-t border-zinc-100 dark:border-zinc-800">
+                <h3
+                  class="text-zinc-900 dark:text-zinc-100 font-semibold mb-4 text-base"
+                >
+                  Latency Rule
+                </h3>
+                <p class="text-base text-zinc-500">
+                  The maximum signal delay for receiving signals would be around
+                  300-500 milliseconds. If the connection between the 2 dresses
+                  is lost, both dresses enter a disconnected idle state by
+                  dimming their lights.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <aside
+        class="max-w-sm md:w-[200px] bg-sidebar-gray dark:bg-zinc-900/50 p-8 md:p-16 flex flex-col justify-start"
+      >
+        <div class="sticky-sidebar"></div>
+      </aside>
+      
+    </div>
+
+    <footer
+        class="bg-zinc-50 dark:bg-zinc-900/50 py-20 border-t border-zinc-100 dark:border-zinc-800"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-5">
+              <div class="text-3xl font-bold tracking-tighter mb-6">ek.</div>
+              <p
+                class="text-xl md:text-2xl text-zinc-500 dark:text-zinc-400 font-light max-w-sm leading-snug"
+              >
+                Translate your ideas to real life products
+              </p>
+            </div>
+            <div class="md:col-span-4 space-y-2 text-zinc-600 dark:text-zinc-400">
+              <p>
+                <a
+                  class="hover:text-primary dark:hover:text-white transition-colors"
+                  href="mailto:ebiyaakwaw@gmail.com"
+                  >ebiyaakwaw@gmail.com</a
+                >
+              </p>
+              <p>+353 87 034 6205</p>
+              <p>Limerick, Ireland</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+  </body>
+</html>

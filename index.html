@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ebiyaa | UX &amp; Interaction Designer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              "background-light": "#F5F5F5",
+              "background-dark": "#0A0A0A",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .sidebar-sticky {
+        position: sticky;
+        top: 80px;
+        height: calc(100vh - 80px);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Geist", serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white dark:bg-background-dark text-zinc-900 dark:text-zinc-100 font-sans selection:bg-zinc-200 dark:selection:bg-zinc-800 position-relative"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <a href="#">
+          <img src="./assets/logo.png" alt="Logo" class="h-8" />
+        </a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a class="hover:text-zinc-500 transition-colors" href="#">Home</a>
+          <a class="hover:text-zinc-500 transition-colors" href="work.html"
+            >Works</a
+          >
+          <a class="hover:text-zinc-500 transition-colors" href="about.html"
+            >About me</a
+          >
+          <a
+            class="hover:text-zinc-500 transition-colors"
+            href="reflections.html"
+            >Reflections</a
+          >
+        </nav>
+        <button
+          class="bg-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+        >
+          <a href="mailto:ebiyaakwaw@gmail.com">Let's talk</a>
+        </button>
+        <button class="md:hidden">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- main container -->
+    <main class="mx-auto pt-20 flex flex-col md:flex-row min-h-screen">
+      <!-- side panel -->
+      <aside
+        class="w-full md:w-[320px] lg:w-[400px] bg-background-light dark:bg-zinc-900 p-8 lg:p-12 sidebar-sticky border-r border-zinc-200 dark:border-zinc-800 flex flex-col justify-between overflow-y-auto"
+      >
+        <div>
+          <h1 class="text-4xl lg:text-5xl font-display leading-tight mb-8">
+            Hello 👋🏽,<br />I'm Ebiyaa.
+          </h1>
+          <div class="space-y-2 mb-12">
+            <div
+              class="flex items-center py-3 border-b border-zinc-300 dark:border-zinc-700"
+            >
+              <span class="text-sm font-medium">UX &amp; Product design</span>
+            </div>
+            <div
+              class="flex items-center py-3 border-b border-zinc-300 dark:border-zinc-700"
+            >
+              <span class="text-sm font-medium">Interaction design</span>
+            </div>
+            <div
+              class="flex items-center py-3 border-b border-zinc-300 dark:border-zinc-700"
+            >
+              <span class="text-sm font-medium">Prototyping</span>
+            </div>
+            <div
+              class="flex items-center py-3 border-b border-zinc-300 dark:border-zinc-700"
+            >
+              <span class="text-sm font-medium">UX research</span>
+            </div>
+          </div>
+          <div
+            class="aspect-[4/5] bg-zinc-200 dark:bg-zinc-800 rounded-2xl overflow-hidden mb-8"
+          >
+            <img
+              alt="Ebiyaa's profile portrait"
+              class="w-full h-full object-cover"
+              src="./assets/headshot.png"
+            />
+          </div>
+        </div>
+
+        <!-- <div class="text-sm space-y-2 text-zinc-600 dark:text-zinc-400">
+          <p>ebiyaakwaw@gmail.com</p>
+          <p>+353 87 034 6205</p>
+          <p>Limerick, Ireland</p>
+        </div> -->
+      </aside>
+      <section class="flex-1 p-8 lg:p-16">
+        <div class="max-w-auto">
+          <h2
+            class="text-3xl lg:text-4xl leading-[1.2] font-medium mb-20 text-zinc-900 dark:text-zinc-100 max-w-3xl"
+          >
+            A UX &amp; interaction designer with 4 years of experience
+            <span class="text-zinc-500 dark:text-zinc-500 font-regular"
+              >specializing in crafting end-to-end digital experiences that feel
+              intentional, refined, and human.</span
+            >
+          </h2>
+          <div class="mb-12">
+            <h3 class="text-xl font-medium mb-8">Selected work</h3>
+            <div class="space-y-12">
+              <div class="group">
+                <div
+                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
+                >
+                  <img
+                    alt="Wewire Customer Dashboard project showcase"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="./assets/wewire-cover.png"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"
+                  ></div>
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-lg font-medium">
+                      Wewire Customer Dashboard
+                    </h4>
+                    <p class="text-zinc-500 dark:text-zinc-400">
+                      Cross border payments
+                    </p>
+                  </div>
+                  <a
+                    class="flex items-center text-sm font-medium hover:underline"
+                    href="./work/wewire-platform.html"
+                  >
+                    Read Case study
+                    <span class="material-symbols-outlined text-[18px] ml-1"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <div class="group">
+                <div
+                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
+                >
+                  <img
+                    alt="Onboarding Platform project showcase"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="./assets/onboarding.png"
+                  />
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-lg font-medium">Onboarding Platform</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400">
+                      Unified onboarding platform for banks, regulators and
+                      fintechs
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <div
+                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
+                >
+                  <img
+                    alt="Justis Africa project showcase"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="./assets/justis.png"
+                  />
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-lg font-medium">Justis Africa</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400">Web Design</p>
+                  </div>
+                  <a
+                    class="flex items-center text-sm font-medium hover:underline"
+                    href="https://justisafrica.com/"
+                  >
+                    Visit website
+                    <span class="material-symbols-outlined text-[18px] ml-1"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <div class="group">
+                <div
+                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
+                >
+                  <img
+                    alt="Mobile POS project showcase"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="./assets/kiios.png"
+                  />
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-lg font-medium">Mobile POS</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400">
+                      Point of Sale / E-commerce
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="group">
+                <div
+                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
+                >
+                  <img
+                    alt="Justis Africa project showcase"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="./assets/euphoria.png"
+                  />
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-lg font-medium">Euphoria</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400">Web Design</p>
+                  </div>
+                  <a
+                    class="flex items-center text-sm font-medium hover:underline"
+                    href="https://www.euphoriaaccra.com/"
+                  >
+                    Visit website
+                    <span class="material-symbols-outlined text-[18px] ml-1"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+
+              <div class="group">
+                <div
+                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
+                >
+                  <img
+                    alt="Justis Africa project showcase"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="./assets/checkout.png"
+                  />
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-lg font-medium">Crypto Checkout</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400">
+                      Stable coin enabled checkout solution
+                    </p>
+                  </div>
+                  <a
+                    class="flex items-center text-sm font-medium hover:underline"
+                    href="https://www.wewire.com/stablecoins"
+                  >
+                    Visit website
+                    <span class="material-symbols-outlined text-[18px] ml-1"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+
+              <div class="group">
+                <div
+                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
+                >
+                  <img
+                    alt="Justis Africa project showcase"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="./assets/mosl.png"
+                  />
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-lg font-medium">MOSL Energy</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400">Web Design</p>
+                  </div>
+                  <a
+                    class="flex items-center text-sm font-medium hover:underline"
+                    href="https://www.moslafrica.com/"
+                  >
+                    Visit website
+                    <span class="material-symbols-outlined text-[18px] ml-1"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+
+              <div class="group">
+                <div
+                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
+                >
+                  <img
+                    alt="Justis Africa project showcase"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="./assets/duston.png"
+                  />
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-lg font-medium">Duston Properties</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400">
+                      Facility Management - Client Dashboard
+                    </p>
+                  </div>
+                  <!-- <a
+                    class="flex items-center text-sm font-medium hover:underline"
+                    href="#"
+                  >
+                    Visit website
+                    <span class="material-symbols-outlined text-[18px] ml-1"
+                      >open_in_new</span
+                    >
+                  </a> -->
+                </div>
+              </div>
+
+              <div class="group">
+                <div
+                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
+                >
+                  <img
+                    alt="Justis Africa project showcase"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="./assets/obya.png"
+                  />
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-lg font-medium">Discover Obya</h4>
+                    <p class="text-zinc-500 dark:text-zinc-400">
+                      Group Flight Charter
+                    </p>
+                  </div>
+                  <a
+                    class="flex items-center text-sm font-medium hover:underline"
+                    href="https://www.discoverobya.com/"
+                  >
+                    Visit website
+                    <span class="material-symbols-outlined text-[18px] ml-1"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer
+      class="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background-dark py-12 px-12"
+    >
+      <div class="max-w-[1440px] mx-auto flex flex-row items-start gap-40">
+        <div class="space-y-2 flex flex-row gap-10 items-center">
+          <a href="#">
+            <img src="./assets/logo.png" alt="Logo" class="h-8" />
+          </a>
+          <p
+            class="text-zinc-900 dark:text-zinc-400 max-w-[240px] font-[400] text-md"
+          >
+            Translate your ideas to real life products
+          </p>
+        </div>
+
+        <!-- contact info -->
+        <div class="space-y-2 text-md">
+          <p class="text-zinc-900 dark:text-zinc-100 font-md">
+            ebiyaakwaw@gmail.com
+          </p>
+          <p class="text-zinc-900 dark:text-zinc-400">+353 87 034 6205</p>
+        </div>
+
+        <!-- address -->
+        <div class="space-y-2 text-md">
+          <p class="text-zinc-900 dark:text-zinc-400">Castletroy</p>
+          <p class="text-zinc-900 dark:text-zinc-400">Limerick, Ireland</p>
+        </div>
+
+        <div
+          class="flex flex-col space-y-2 text-md text-zinc-900 dark:text-zinc-400"
+        >
+          <a
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors"
+            href="https://www.linkedin.com/in/ebi-yaa-kwaw/"
+          >
+            <span class="material-symbols-outlined text-[20px]"></span>
+            LinkedIn
+          </a>
+          <a
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors"
+            href="https://dribbble.com/ebiyaa"
+          >
+            <span class="material-symbols-outlined text-[20px]"></span>
+            Dribbble
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

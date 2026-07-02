@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ebiyaa | UX &amp; Interaction Designer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              "background-light": "#ffffff",
+              "background-dark": "#0a0a0a",
+              "sidebar-light": "#f4f4f4",
+              "sidebar-dark": "#121212",
+              "border-light": "#e5e5e5",
+              "border-dark": "#262626",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Playfair Display", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "4px",
+            },
+          },
+        },
+      };
+    </script>
+    <script async src="https://www.instagram.com/embed.js"></script>
+    <style>
+      body {
+        font-family: "Geist", sans-serif;
+      }
+      .font-display {
+        font-family: "Playfair Display", serif;
+      }
+      .material-symbols-outlined {
+        font-size: 20px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 selection:bg-gray-200 dark:selection:bg-gray-800"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <a href="index.html">
+          <img src="./assets/logo.png" alt="Logo" class="h-8" />
+        </a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a class="hover:text-zinc-500 transition-colors" href="index.html"
+            >Home</a
+          >
+          <a class="hover:text-zinc-500 transition-colors" href="work.html"
+            >Works</a
+          >
+          <a class="hover:text-zinc-500 transition-colors" href="#">About me</a>
+          <a
+            class="hover:text-zinc-500 transition-colors"
+            href="reflections.html"
+            >Reflections</a
+          >
+        </nav>
+        <button
+          class="bg-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+        >
+          <a href="mailto:ebiyaakwaw@gmail.com">Let's talk</a>
+        </button>
+        <button class="md:hidden">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="mx-auto pt-20 flex flex-col md:flex-row min-h-screen w-full">
+      <!-- side panel -->
+      <aside
+        class="w-full md:w-[320px] lg:w-[400px] bg-sidebar-light dark:bg-sidebar-dark p-8 lg:p-12 md:min-h-screen border-r border-border-light dark:border-border-dark"
+      >
+        <h1 class="text-4xl lg:text-5xl font-display mb-12">About Me</h1>
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <div
+              class="flex justify-between items-end border-b border-gray-300 dark:border-gray-700 pb-2"
+            >
+              <span class="text-medium text-gray-500 dark:text-gray-400"
+                >Years of experience</span
+              >
+              <span class="font-medium">4+</span>
+            </div>
+            <div
+              class="flex justify-between items-end border-b border-gray-300 dark:border-gray-700 pb-2"
+            >
+              <span class="text-medium text-gray-500 dark:text-gray-400"
+                >Projects completed</span
+              >
+              <span class="font-medium">30+</span>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h3
+              class="text-medium text-gray-500 font-medium border-b border-gray-300 dark:border-gray-700 pb-2"
+            >
+              Education
+            </h3>
+            <div class="space-y-6">
+              <div class="border-b border-gray-300 dark:border-gray-700 pb-4">
+                <h4 class="font-medium text-sm leading-snug">
+                  MSC Interaction &amp; <br />
+                  Experience Design
+                </h4>
+                <div class="flex flex-row justify-between">
+                  <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    University of Limerick
+                  </p>
+                  <p class="text-sm text-gray-500 mt-1">2025/2026</p>
+                </div>
+              </div>
+              <div class="border-b border-gray-300 dark:border-gray-700 pb-4">
+                <h4 class="font-medium text-sm leading-snug">
+                  Information Studies &amp; <br />
+                  Psychology
+                </h4>
+
+                <div class="flex flex-row justify-between">
+                  <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    University of Ghana
+                  </p>
+                  <p class="text-sm text-gray-500 mt-1">2017</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="pt-8 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <p
+              class="hover:text-primary dark:hover:text-white cursor-pointer transition-colors"
+            >
+              ebiyaakwaw@gmail.com
+            </p>
+            <p>+353 87 034 6205</p>
+            <p>Limerick, Ireland</p>
+          </div> -->
+        </div>
+      </aside>
+
+      <!-- main view -->
+      <section class="flex-1 p-8 lg:p-16">
+        <div class="max-w-auto">
+          <h2 class="text-5xl font-medium mb-2">Ebi-Yaa</h2>
+          <p class="text-2xl font-md text-gray-500 dark:text-gray-400 mb-8">
+            pronounced as
+            <span
+              class="font-bold text-primary dark:text-white italic tracking-wide"
+              >/eibi:jaa/</span
+            >
+          </p>
+          <div
+            class="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed"
+          >
+            <p>
+              As a UX designer, I have delivered end-to-end customer platforms
+              and internal tools across different industries. Working with
+              software agencies and product-led companies, I have learned to
+              combine deep expertise in fintech with a broad understanding of
+              various topics, helping me balance specialization with
+              collaboration.
+            </p>
+            <p>
+              With a background in UX, Interaction Design, Psychology and
+              Information Studies, I apply human-centered design principles and
+              research methods to understand user behaviour, needs and pain
+              points.
+            </p>
+          </div>
+        </div>
+        <div class="mt-20">
+          <div
+            class="flex justify-between items-end mb-8 border-b border-gray-300 dark:border-gray-700 pb-4"
+          >
+            <h3 class="text-3xl">Experience</h3>
+            <a
+              class="text-md font-medium flex items-center hover:underline"
+              href="#"
+            >
+              Download resume
+              <span class="material-symbols-outlined ml-1">download</span>
+            </a>
+          </div>
+
+          <div class="space-y-8">
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-gray-300 dark:border-gray-700 pb-8"
+            >
+              <div class="md:col-span-4">
+                <h4 class="font-medium text-lg">Senior UX Designer</h4>
+                <p
+                  class="text-sm text-gray-600 dark:text-gray-400 font-family-geist"
+                >
+                  Wewire - Africa
+                </p>
+                <p class="text-sm text-gray-500 mt-1">
+                  May 2025 - September 2025
+                </p>
+              </div>
+              <div class="md:col-span-8">
+                <ul
+                  class="space-y-3 text-sm text-gray-600 dark:text-gray-400 list-disc pl-4"
+                >
+                  <li>
+                    Designed the first launched, end to end customer platform,
+                    enabling banking and stablecoin integrations for
+                    cross-border transactions through virtual wallets and
+                    accounts.
+                  </li>
+                  <li>
+                    Delivered scalable design solutions that integrated multiple
+                    currencies and allowed the business onboard clients across
+                    different markets, growing our traded currencies from 4 to
+                    15.
+                  </li>
+                  <li>
+                    Led the redesign of internal OTC trading tools with a main
+                    focus on live transaction monitoring that enabled a 10 times
+                    daily trading volume.
+                  </li>
+                  <li>
+                    Contributed to the successful rollout of our stablecoin
+                    rails through an API-enabled crypto checkout platform for
+                    businesses.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-gray-300 dark:border-gray-700 pb-8"
+            >
+              <div class="md:col-span-4">
+                <h4 class="font-medium text-lg">User Experience Designer</h4>
+                <p
+                  class="text-sm text-gray-600 dark:text-gray-400 font-family-geist"
+                >
+                  Wewire - Africa
+                </p>
+                <p class="text-sm text-gray-500 mt-1">
+                  January 2023 - April 2025
+                </p>
+              </div>
+              <div class="md:col-span-8">
+                <ul
+                  class="space-y-3 text-sm text-gray-600 dark:text-gray-400 list-disc pl-4"
+                >
+                  <li>
+                    Collaborated closely with product managers, engineers, and
+                    compliance teams to translate business and regulatory
+                    requirements into intuitive user experiences that meets
+                    usability standards.
+                  </li>
+                  <li>
+                    Translated complex financial and blockchain concepts into
+                    user-friendly interfaces that supported the launch of our
+                    stable coin rails.
+                  </li>
+                  <li>
+                    Created and maintained a component library that aligned with
+                    our brand and product strategy, helping engineers scale
+                    customer-facing and internal platforms with reusable
+                    components.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-gray-300 dark:border-gray-700 pb-8"
+            >
+              <div class="md:col-span-4">
+                <h4 class="font-medium text-lg">User Interface Designer</h4>
+                <p
+                  class="text-sm text-gray-600 dark:text-gray-400 font-family-geist"
+                >
+                  Effect Studios - Global
+                </p>
+                <p class="text-sm text-gray-500 mt-1">
+                  April 2022 - January 2023
+                </p>
+              </div>
+              <div
+                class="md:col-span-8 text-sm text-gray-600 dark:text-gray-400"
+              >
+                <ul class="space-y-3 list-disc pl-4">
+                  <li>
+                    Optimized responsive interfaces for client websites and
+                    digital products across multiple industries.
+                  </li>
+                  <li>
+                    Translated business goals and user needs into intuitive UI
+                    solutions for E-commerce clients.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-20">
+          <h3
+            class="text-3xl mb-6 border-b border-gray-300 dark:border-gray-700 pb-4"
+          >
+            Certifications
+          </h3>
+          <div class="space-y-6">
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-4 border-b border-gray-300 dark:border-gray-700 pb-8"
+            >
+              <div class="md:col-span-4">
+                <h4 class="font-medium">Mobile App Development</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  Ghana Tech Lab
+                </p>
+                <p class="text-sm text-gray-500 mt-1">March 2019 - June 2019</p>
+              </div>
+              <div
+                class="md:col-span-8 text-sm text-gray-600 dark:text-gray-400"
+              >
+                Gained hands-on training in mobile app development using React
+                Native, design thinking, and startup pitching through an
+                intensive hackathon and exhibition experience.
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-gray-300 dark:border-gray-700 pb-8"
+            >
+              <div class="md:col-span-4">
+                <h4 class="font-medium">Web3 Fundamentals</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  SheFi Bootcamp
+                </p>
+                <p class="text-sm text-gray-500 mt-1">May 2025</p>
+              </div>
+              <div
+                class="md:col-span-8 text-sm text-gray-600 dark:text-gray-400"
+              >
+                Completed the 2025 SheFi scholarship program, gaining
+                comprehensive blockchain education, experience with crypto tools
+                such as digital wallets, DeFi, NFTs and DAOs.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-20">
+          <h3 class="text-3xl mb-6">Software stack</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div
+              class="p-6 border rounded-md border-border-light dark:border-border-dark bg-sidebar-light/60 dark:bg-sidebar-dark/30 hover:border-primary dark:hover:border-white transition-all cursor-default"
+            >
+              <h5 class="font-medium text-medium">Figma</h5>
+              <p class="text-sm text-gray-500 mt-1">General design tool</p>
+            </div>
+            <div
+              class="p-6 border rounded-md border-border-light dark:border-border-dark bg-sidebar-light/60 dark:bg-sidebar-dark/30 hover:border-primary dark:hover:border-white transition-all cursor-default"
+            >
+              <h5 class="font-medium text-medium">React js</h5>
+              <p class="text-ms text-gray-500 mt-1">Front-end development</p>
+            </div>
+            <div
+              class="p-6 border rounded-md border-border-light dark:border-border-dark bg-sidebar-light/60 dark:bg-sidebar-dark/30 hover:border-primary dark:hover:border-white transition-all cursor-default"
+            >
+              <h5 class="font-medium text-medium">React Native</h5>
+              <p class="text-sm text-gray-500 mt-1">Mobile app development</p>
+            </div>
+            <div
+              class="p-6 border rounded-md border-border-light dark:border-border-dark bg-sidebar-light/60 dark:bg-sidebar-dark/30 hover:border-primary dark:hover:border-white transition-all cursor-default"
+            >
+              <h5 class="font-medium text-medium">Unity</h5>
+              <p class="text-sm text-gray-500 mt-1">Augmented reality design</p>
+            </div>
+            <div
+              class="p-6 border rounded-md border-border-light dark:border-border-dark bg-sidebar-light/60 dark:bg-sidebar-dark/30 hover:border-primary dark:hover:border-white transition-all cursor-default"
+            >
+              <h5 class="font-medium text-medium">Framer</h5>
+              <p class="text-sm text-gray-500 mt-1">No-code development</p>
+            </div>
+            <div
+              class="p-6 border rounded-md border-border-light dark:border-border-dark bg-sidebar-light/60 dark:bg-sidebar-dark/30 hover:border-primary dark:hover:border-white transition-all cursor-default"
+            >
+              <h5 class="font-medium text-medium">HTML &amp; CSS</h5>
+              <p class="text-sm text-gray-500 mt-1">Web development</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- projects -->
+        <div class="mt-24">
+          <h3 class="text-3xl mb-6">
+            Side quests and spaces<br />I’ve featured in
+          </h3>
+
+          <div class="flex flex-row w-full gap-4">
+            <!-- Wewire instagram -->
+            <div class="dark:bg-sidebar-dark rounded-md relative group">
+              <blockquote
+                class="instagram-media object-cover grayscale group-hover:grayscale-0 transition-all duration-500 rounded-lg overflow-hidden"
+                data-instgrm-permalink="https://www.instagram.com/reel/DJ_63xQsOuv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                data-instgrm-version="14"
+                style="
+                  background: #fff;
+                  margin: 1rem auto;
+                  min-width: 320px;
+                  width: 540px;
+                  min-height: 200px;
+                  height: 400px;
+                  border-radius: 16px;
+                  overflow: hidden;
+                "
+              ></blockquote>
+            </div>
+
+            <!-- building bytes / women in design -->
+            <a
+              href="https://youtu.be/yIyGy3mxuMI?si=7CBM6Ji4vGBmD9In"
+              class="rounded-md relative group h-[400px] w-[540px] overflow-hidden"
+            >
+              <!-- <img 
+                class="rounded-md relative group h-[400px] w-[540px] overflow-hidden"
+                src="/assets/building-bytes.jpg"> -->
+              <img
+                class="rounded-md relative group h-[400px] overflow-hidden"
+                src="./assets/building-bytes.jpg"
+                alt="Women in Design"
+              />
+            </a>
+
+            <div
+              class="aspect-[4/3] bg-gray-100 dark:bg-sidebar-dark rounded overflow-hidden relative group"
+            >
+              <img
+                alt="Exhibition space"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeVB-3RgsRUW4tI-ph4UqbN1Dej2t9qLXc0WVy-5-FL9EO7hu2hKS-ezTcXZ-bKfJEEaWZ7iKSIHGbCXJeQqvGnabGebOPNqFRuVvXGJp5JFhCCl8pDwAQp3RvAmEQVqsrTkHS0qTdr3inXyqF5AVCdt4F3ObJm_zfUA4koSxHLaVadp1OFfq3t5Mr_VQ_NESX9no4AjyjFX_ai7v2etDwJCreimN5g_tZv9dpgUBZFzlZ2rXfDeZDBOdWNSqKdwEU6C3HOnHa0T8"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background-dark py-12 px-12"
+    >
+      <div class="max-w-[1440px] mx-auto flex flex-row items-start gap-40">
+        <div class="space-y-2 flex flex-row gap-10 items-center">
+          <a href="#">
+            <img src="./assets/logo.png" alt="Logo" class="h-8" />
+          </a>
+          <p
+            class="text-zinc-900 dark:text-zinc-400 max-w-[240px] font-[400] text-md"
+          >
+            Translate your ideas to real life products
+          </p>
+        </div>
+
+        <!-- contact info -->
+        <div class="space-y-2 text-md">
+          <p class="text-zinc-900 dark:text-zinc-100 font-md">
+            ebiyaakwaw@gmail.com
+          </p>
+          <p class="text-zinc-900 dark:text-zinc-400">+353 87 034 6205</p>
+        </div>
+
+        <!-- address -->
+        <div class="space-y-2 text-md">
+          <p class="text-zinc-900 dark:text-zinc-400">Castletroy</p>
+          <p class="text-zinc-900 dark:text-zinc-400">Limerick, Ireland</p>
+        </div>
+
+        <div
+          class="flex flex-col space-y-2 text-md text-zinc-900 dark:text-zinc-400"
+        >
+          <a
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors"
+            href="https://www.linkedin.com/in/ebi-yaa-kwaw/"
+          >
+            <span class="material-symbols-outlined text-[20px]"></span>
+            LinkedIn
+          </a>
+          <a
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors"
+            href="https://dribbble.com/ebiyaa"
+          >
+            <span class="material-symbols-outlined text-[20px]"></span>
+            Dribbble
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      class="fixed bottom-6 right-6 p-3 bg-primary text-white rounded-full shadow-xl hover:scale-110 active:scale-95 transition-all"
+      onclick="document.documentElement.classList.toggle('dark')"
+    >
+      <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+      <span class="material-symbols-outlined hidden dark:block"
+        >light_mode</span
+      >
+    </button>
+  </body>
+</html>

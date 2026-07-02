@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reflections | UX &amp; Interaction Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              "background-light": "#FFFFFF",
+              "background-dark": "#121212",
+              "sidebar-light": "#F3F4F6",
+              "sidebar-dark": "#1A1A1A",
+            },
+            fontFamily: {
+              sans: ["Geist", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              large: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Geist", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <a href="index.html">
+          <img src="./assets/logo.png" alt="Logo" class="h-8" />
+        </a>
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a class="hover:text-zinc-500 transition-colors" href="index.html"
+            >Home</a
+          >
+          <a class="hover:text-zinc-500 transition-colors" href="work.html"
+            >Works</a
+          >
+          <a class="hover:text-zinc-500 transition-colors" href="about.html"
+            >About me</a
+          >
+          <a class="hover:text-zinc-500 transition-colors" href="#"
+            >Reflections</a
+          >
+        </nav>
+        <button
+          class="bg-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+        >
+          <a href="mailto:ebiyaakwaw@gmail.com">Let's talk</a>
+        </button>
+        <button class="md:hidden">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- main body -->
+    <main class="max-auto mx-auto flex flex-col md:flex-row min-h-screen">
+      <!-- side panel -->
+      <aside
+        class="w-full md:w-[400px] bg-sidebar-light dark:bg-sidebar-dark p-8 md:p-16 flex flex-col justify-between"
+      >
+        <div class="space-y-8">
+          <h1 class="text-5xl md:text-6xl leading-[1.1]">
+            Explore my latest reflections
+          </h1>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed max-w-sm">
+            Read my thought pieces on my side projects, in interaction design
+            and interactive media. I also feature some of my work in advocacy
+            and my contributions to the design community.
+          </p>
+        </div>
+        <div class="mt-12 md:mt-0 space-y-4 text-sm">
+          <div class="flex flex-col space-y-1">
+            <span
+              class="text-gray-400 uppercase tracking-widest text-[10px] font-bold"
+              >Contact</span
+            >
+            <a
+              class="text-lg hover:underline underline-offset-4"
+              href="mailto:ebiyaakwaw@gmail.com"
+              >ebiyaakwaw@gmail.com</a
+            >
+          </div>
+          <div class="flex flex-col space-y-1">
+            <span
+              class="text-gray-400 uppercase tracking-widest text-[10px] font-bold"
+              >Phone</span
+            >
+            <a class="text-lg" href="tel:+353870346205">+353 87 034 6205</a>
+          </div>
+          <div class="flex flex-col space-y-1">
+            <span
+              class="text-gray-400 uppercase tracking-widest text-[10px] font-bold"
+              >Location</span
+            >
+            <span class="text-lg">Limerick, Ireland</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- main panel -->
+      <section class="flex-1 p-8 md:p-16 space-y-16">
+        <article
+          class="group flex flex-col md:flex-row items-center gap-8 md:gap-16 pb-16 border-b border-gray-100 dark:border-gray-800 last:border-0"
+        >
+          <div class="flex-1 order-2 md:order-1">
+            <h2
+              class="text-2xl font-medium leading-tight group-hover:text-primary transition-colors cursor-pointer mb-2"
+            >
+              <a href="/blog/i-got-to-play-director.html">
+                I got to play Director✨
+              </a>
+            </h2>
+            <p class="text-gray-500 dark:text-gray-400">
+              Producing my first video ad
+            </p>
+          </div>
+          <div
+            class="w-full md:w-[420px] aspect-[16/10] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden relative"
+          >
+            <a href="/blog/i-got-to-play-director.html">
+              <img
+                alt="Camera lens and video production equipment"
+                class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcN7WO9_lpnuWwNuUXa01oM_5NU1ROyyBBHPZbKcZ7lSsGBeE0wGJVpSvN4jToGufy08jlWg-UjSY06bPdwK3iRPhUIhfsIneCv87FKfn3kfXCHUbakd3Ba6s2J15Xil8_HB9wh_kfIF9pD_IIz9ojvVLlRG2hiACanGrsr1Otab08l2gV3DMxWUAM988nFzZt1crzqeZeM2Mb6OawwGtwK89_joHHyjxKel_UsC2nuEtTOQ6tklAZva5lZHWaF8KRNa8cn2Okpr8"
+              />
+            </a>
+            <div class="absolute inset-0 bg-black/5 dark:bg-black/20"></div>
+          </div>
+        </article>
+
+        <article
+          class="group flex flex-col md:flex-row items-center gap-8 md:gap-16 pb-16 border-b border-gray-100 dark:border-gray-800 last:border-0"
+        >
+          <div class="flex-1 order-2 md:order-1">
+            <h2
+              class="text-2xl font-medium leading-tight group-hover:text-primary transition-colors cursor-pointer mb-2"
+            >
+              <a href="/blog/beyond-the-lens.html">
+                Beyond the Lens: A Visual Story of My Work, My Drive, and My
+                Reflections
+              </a>
+            </h2>
+            <p class="text-gray-500 dark:text-gray-400">
+              Exploring the narrative behind the process
+            </p>
+          </div>
+          <div
+            class="w-full md:w-[420px] aspect-[16/10] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden relative"
+          >
+            <a href="/blog/beyond-the-lens.html">
+              <img
+                alt="Modern office workspace with natural light"
+                class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdFo9-2jeothCKkt-u1RdY70rc7-K7i-_TJuFAXjboNJRg1UMOzW6Gato2cLMSr6xObcwgiqjIP-BUS1eYiXh5aIec4XDvGdeQnHW3W8nES3G7aE3rN4w3lbkXXnPhL4Rq5xBfiswVu9nS_PF24j1O4dCFRUwGphZyAL1v90_iqmlvo3qlYhNcNj8oTey_i8xHI1gojO-Y_WQAE3cWubn9GfK5gpoAbd87AcYUQ3y1EsHeBE1Z2ej4JlHYN7Ba-30zWzHckRejeLw"
+              />
+            </a>
+            <div class="absolute inset-0 bg-black/5 dark:bg-black/20"></div>
+          </div>
+        </article>
+
+        <article
+          class="group flex flex-col md:flex-row items-center gap-8 md:gap-16 pb-16 border-b border-gray-100 dark:border-gray-800 last:border-0"
+        >
+          <div class="flex-1 order-2 md:order-1">
+            <h2
+              class="text-2xl font-medium leading-tight group-hover:text-primary transition-colors cursor-pointer mb-2"
+            >
+              <a href="/blog/hackhive-1.0.html">
+                Bringing HackHive 1.0 to Life - My Contribution as an Organiser
+                &amp; Hackathon Manager
+              </a>
+            </h2>
+            <p class="text-gray-500 dark:text-gray-400">
+              Managing large scale technical events
+            </p>
+          </div>
+          <div
+            class="w-full md:w-[420px] aspect-[16/10] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden relative"
+          >
+            <a href="/blog/hackhive-1.0.html">
+              <img
+                alt="Hackathon collaboration space"
+                class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtZVAS49wO3oNMKGtddkwYnre-9k7w5s5ZZi2vqpzj7bSXPVZYmhflceKbZNP9cn2tvPA08VF0kbs-tVyTnO3XX5gE2B9Ja647qAggEjoVDHLuUX_F1V_WW9Daqq5Z13mTKVdfcbqKhVdQcTTapsEJF_cfio473hDr8_C6fN66lgiK0dpSxvfh_B2TTEFr17MVhwi_WG6ZiVqPXouYrR3H064zDy7kW19lZZczsEzb6HBnkm6QFaiCUTWqi2Yx_i3MBNiz3hKYr3E"
+              />
+            </a>
+            <div class="absolute inset-0 bg-black/5 dark:bg-black/20"></div>
+          </div>
+        </article>
+
+        <article
+          class="group flex flex-col md:flex-row items-center gap-8 md:gap-16 pb-16 border-b border-gray-100 dark:border-gray-800 last:border-0"
+        >
+          <div class="flex-1 order-2 md:order-1">
+            <h2
+              class="text-2xl font-medium leading-tight group-hover:text-primary transition-colors cursor-pointer mb-2"
+            >
+              <a href="./blog/iwd.html">
+                Empowering the next generation: Design, FinTech and
+                International Women's Day at the African Science Academy
+              </a>
+            </h2>
+            <p class="text-gray-500 dark:text-gray-400">
+              Education and advocacy in the tech space
+            </p>
+          </div>
+          <div
+            class="w-full md:w-[420px] aspect-[16/10] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden relative"
+          >
+            <a href="/blog/iwd.html">
+              <img
+                alt="Students in a learning environment"
+                class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMnUWkA2v55F9WwKBC3VODhtORPDYyguFn_LFUJTodvpKx5GBy3oGhFA8mIxykEl1u-4EU59f4nquUc-7fblue96-YY89erHnk8-lIUg6S5GpQiL3ouR_vNFH9isDya0ym0bZPfCdEnH0aXxslrbGrMYwoJ2NDA0IwHZbRuapEAS34tVbv0yFsOKZfEwSfzj8qvkHc3fznU9ABLL3n5EpO-FTQwbKuu80hsleEwnntPyVZhVqjyQ9c5udk14fnCySAScOHl9miHyo"
+              />
+            </a>
+            <div class="absolute inset-0 bg-black/5 dark:bg-black/20"></div>
+          </div>
+        </article>
+
+        <article
+          class="group flex flex-col md:flex-row items-center gap-8 md:gap-16 pb-16 border-b border-gray-100 dark:border-gray-800 last:border-0"
+        >
+          <div class="flex-1 order-2 md:order-1">
+            <h2
+              class="text-2xl font-medium leading-tight group-hover:text-primary transition-colors cursor-pointer mb-2"
+            >
+              <a href="./blog/second-skin.html">
+                Second Skin <br />
+                Interactive Art Installation
+              </a>
+            </h2>
+            <p class="text-gray-500 dark:text-gray-400">
+              “What I do and what I touch has an impact on the environment”
+            </p>
+          </div>
+          <div
+            class="w-full md:w-[420px] aspect-[16/10] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden relative"
+          >
+            <a href="/blog/iwd.html">
+              <img
+                alt="Students in a learning environment"
+                class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                src="./assets/glow-dress.png"
+              />
+            </a>
+            <div class="absolute inset-0 bg-black/5 dark:bg-black/20"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer
+      class="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background-dark py-16 px-6"
+    >
+      <div
+        class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12"
+      >
+        <div class="space-y-4">
+          <a href="#">
+            <img src="./assets/logo.png" alt="Logo" class="h-8" />
+          </a>
+          <p
+            class="text-zinc-900 dark:text-zinc-400 max-w-[240px] font-[400] text-md"
+          >
+            Translate your ideas to real life products
+          </p>
+        </div>
+        <div class="space-y-2 text-md">
+          <p class="text-zinc-900 dark:text-zinc-100 font-md">
+            ebiyaakwaw@gmail.com
+          </p>
+          <p class="text-zinc-900 dark:text-zinc-400">+353 87 034 6205</p>
+          <p class="text-zinc-900 dark:text-zinc-400">Limerick, Ireland</p>
+        </div>
+        <div
+          class="flex flex-col space-y-4 text-md text-zinc-900 dark:text-zinc-400"
+        >
+          <a
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors"
+            href="https://www.linkedin.com/in/ebi-yaa-kwaw/"
+          >
+            <span class="material-symbols-outlined text-[20px]"></span>
+            LinkedIn
+          </a>
+          <a
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors"
+            href="https://dribbble.com/ebiyaa"
+          >
+            <span class="material-symbols-outlined text-[20px]"></span>
+            Dribbble
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
