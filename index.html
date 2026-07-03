@@ -53,6 +53,53 @@
       h6 {
         font-family: "Geist", serif;
       }
+
+      .work-list {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0 48px 40px;
+      }
+      .work-item {
+        margin-bottom: 40px;
+      }
+      .work-media {
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--panel);
+        aspect-ratio: 16/8.2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        font-size: 0.85rem;
+        margin-bottom: 14px;
+        position: relative;
+      }
+      .work-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .work-caption {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 1.1rem;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .work-caption .wtitle {
+        font-weight: 600;
+      }
+      .work-caption .wtitle span {
+        font-weight: 400;
+        color: rgb(89, 88, 88);
+      }
+      .work-caption a {
+        text-decoration: underline;
+        white-space: nowrap;
+        font-size: 0.9rem;
+      }
     </style>
   </head>
   <body
@@ -75,11 +122,11 @@
           <a class="hover:text-zinc-500 transition-colors" href="about.html"
             >About me</a
           >
-          <a
+          <!-- <a
             class="hover:text-zinc-500 transition-colors"
             href="reflections.html"
             >Reflections</a
-          >
+          > -->
         </nav>
         <button
           class="bg-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
@@ -152,42 +199,62 @@
               intentional, refined, and human.</span
             >
           </h2>
+
+          <!-- fyp project -->
+          <div class="work-grid-item  overflow-hidden">
+            <a
+              href="./work/thesis.html"
+              class="work-media"
+              aria-label="AI Agent"
+            >
+              <img
+                class="max-w-none h-full object-contain transition-transform duration-700 group-hover:scale-105 rounded-3xl"
+                src="assets/ai-agent.jpg"
+                alt="NexaVault app screens"
+              />
+            </a>
+            <div class="work-caption flex flex-row">
+              <div class="wtitle flex flex-col">
+                <p>Digital Identity & Autonomous AI Agents</p>
+                <span
+                  >MSc thesis on speculative design research into decentralised finance</span
+                >
+              </div>
+              <a class="flex-col" href="./work/thesis.html"
+                >Read summary ↗</a
+              >
+            </div>
+          </div>
+
+          <div class="border border-gray-200 mb-12 mt-12"></div>
+
           <div class="mb-12">
             <h3 class="text-xl font-medium mb-8">Selected work</h3>
             <div class="space-y-12">
+              <!-- echocapsule -->
               <div class="group">
                 <div
                   class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
                 >
                   <img
-                    alt="Wewire Customer Dashboard project showcase"
+                    alt="Echo Capsule"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="./assets/wewire-cover.png"
+                    src="./assets/Echomvp.png"
                   />
                   <div
                     class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"
                   ></div>
                 </div>
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-lg font-medium">
-                      Wewire Customer Dashboard
-                    </h4>
-                    <p class="text-zinc-500 dark:text-zinc-400">
-                      Cross border payments
-                    </p>
+                <div class="work-caption">
+                  <div class="wtitle">
+                    <p>Echo Capsule</p>
+                    <span>Digital Memory Capsule</span>
                   </div>
-                  <a
-                    class="flex items-center text-sm font-medium hover:underline"
-                    href="./work/wewire-platform.html"
-                  >
-                    Read Case study
-                    <span class="material-symbols-outlined text-[18px] ml-1"
-                      >open_in_new</span
-                    >
-                  </a>
+                  <a href="work/echoCapsule.html">Read Case Study ↗</a>
                 </div>
               </div>
+
+              <!-- wewire -->
               <div class="group">
                 <div
                   class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
@@ -195,203 +262,38 @@
                   <img
                     alt="Onboarding Platform project showcase"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="./assets/onboarding.png"
+                    src="./assets/wewire2.png"
                   />
                 </div>
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-lg font-medium">Onboarding Platform</h4>
-                    <p class="text-zinc-500 dark:text-zinc-400">
-                      Unified onboarding platform for banks, regulators and
-                      fintechs
-                    </p>
+                <div class="work-caption">
+                  <div class="wtitle">
+                    <p>Wewire Customer Platform</p>
+                    <span>B2B Cross border payments</span>
                   </div>
-                </div>
-              </div>
-              <div class="group">
-                <div
-                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
-                >
-                  <img
-                    alt="Justis Africa project showcase"
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="./assets/justis.png"
-                  />
-                </div>
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-lg font-medium">Justis Africa</h4>
-                    <p class="text-zinc-500 dark:text-zinc-400">Web Design</p>
-                  </div>
-                  <a
-                    class="flex items-center text-sm font-medium hover:underline"
-                    href="https://justisafrica.com/"
-                  >
-                    Visit website
-                    <span class="material-symbols-outlined text-[18px] ml-1"
-                      >open_in_new</span
-                    >
-                  </a>
-                </div>
-              </div>
-              <div class="group">
-                <div
-                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
-                >
-                  <img
-                    alt="Mobile POS project showcase"
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="./assets/kiios.png"
-                  />
-                </div>
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-lg font-medium">Mobile POS</h4>
-                    <p class="text-zinc-500 dark:text-zinc-400">
-                      Point of Sale / E-commerce
-                    </p>
-                  </div>
+                  <a href="work/wewire-platform.html">Read Case Study ↗</a>
                 </div>
               </div>
 
+              <!-- nexavault -->
               <div class="group">
                 <div
                   class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
                 >
                   <img
-                    alt="Justis Africa project showcase"
+                    alt="Nexavault"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="./assets/euphoria.png"
+                    src="./assets/Nexavaultimg.png"
                   />
                 </div>
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-lg font-medium">Euphoria</h4>
-                    <p class="text-zinc-500 dark:text-zinc-400">Web Design</p>
-                  </div>
-                  <a
-                    class="flex items-center text-sm font-medium hover:underline"
-                    href="https://www.euphoriaaccra.com/"
-                  >
-                    Visit website
-                    <span class="material-symbols-outlined text-[18px] ml-1"
-                      >open_in_new</span
+                <div class="work-caption">
+                  <div class="wtitle">
+                    <p>NexaVault</p>
+                    <span
+                      >Financial command centre - Cultural probe <br />
+                      Research & prototype</span
                     >
-                  </a>
-                </div>
-              </div>
-
-              <div class="group">
-                <div
-                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
-                >
-                  <img
-                    alt="Justis Africa project showcase"
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="./assets/checkout.png"
-                  />
-                </div>
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-lg font-medium">Crypto Checkout</h4>
-                    <p class="text-zinc-500 dark:text-zinc-400">
-                      Stable coin enabled checkout solution
-                    </p>
                   </div>
-                  <a
-                    class="flex items-center text-sm font-medium hover:underline"
-                    href="https://www.wewire.com/stablecoins"
-                  >
-                    Visit website
-                    <span class="material-symbols-outlined text-[18px] ml-1"
-                      >open_in_new</span
-                    >
-                  </a>
-                </div>
-              </div>
-
-              <div class="group">
-                <div
-                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
-                >
-                  <img
-                    alt="Justis Africa project showcase"
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="./assets/mosl.png"
-                  />
-                </div>
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-lg font-medium">MOSL Energy</h4>
-                    <p class="text-zinc-500 dark:text-zinc-400">Web Design</p>
-                  </div>
-                  <a
-                    class="flex items-center text-sm font-medium hover:underline"
-                    href="https://www.moslafrica.com/"
-                  >
-                    Visit website
-                    <span class="material-symbols-outlined text-[18px] ml-1"
-                      >open_in_new</span
-                    >
-                  </a>
-                </div>
-              </div>
-
-              <div class="group">
-                <div
-                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
-                >
-                  <img
-                    alt="Justis Africa project showcase"
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="./assets/duston.png"
-                  />
-                </div>
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-lg font-medium">Duston Properties</h4>
-                    <p class="text-zinc-500 dark:text-zinc-400">
-                      Facility Management - Client Dashboard
-                    </p>
-                  </div>
-                  <!-- <a
-                    class="flex items-center text-sm font-medium hover:underline"
-                    href="#"
-                  >
-                    Visit website
-                    <span class="material-symbols-outlined text-[18px] ml-1"
-                      >open_in_new</span
-                    >
-                  </a> -->
-                </div>
-              </div>
-
-              <div class="group">
-                <div
-                  class="aspect-[16/9] bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-zinc-800"
-                >
-                  <img
-                    alt="Justis Africa project showcase"
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="./assets/obya.png"
-                  />
-                </div>
-                <div class="flex justify-between items-start">
-                  <div>
-                    <h4 class="text-lg font-medium">Discover Obya</h4>
-                    <p class="text-zinc-500 dark:text-zinc-400">
-                      Group Flight Charter
-                    </p>
-                  </div>
-                  <a
-                    class="flex items-center text-sm font-medium hover:underline"
-                    href="https://www.discoverobya.com/"
-                  >
-                    Visit website
-                    <span class="material-symbols-outlined text-[18px] ml-1"
-                      >open_in_new</span
-                    >
-                  </a>
+                  <a href="work/nexavault.html">Read Case Study ↗</a>
                 </div>
               </div>
             </div>
@@ -434,14 +336,14 @@
           class="flex flex-col space-y-2 text-md text-zinc-900 dark:text-zinc-400"
         >
           <a
-            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors"
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors underline font-bold"
             href="https://www.linkedin.com/in/ebi-yaa-kwaw/"
           >
             <span class="material-symbols-outlined text-[20px]"></span>
             LinkedIn
           </a>
           <a
-            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors"
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-100 hover:text-zinc-500 transition-colors underline font-bold"
             href="https://dribbble.com/ebiyaa"
           >
             <span class="material-symbols-outlined text-[20px]"></span>

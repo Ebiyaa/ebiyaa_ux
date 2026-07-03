@@ -475,6 +475,7 @@
       .works-header h1 {
         font-size: 2.6rem;
         margin-bottom: 16px;
+        font-family: Geist, sans-serif;
       }
       .works-lede {
         font-size: 1.3rem;
@@ -727,11 +728,11 @@
           <a class="hover:text-zinc-500 transition-colors" href="about.html"
             >About me</a
           >
-          <a
+          <!-- <a
             class="hover:text-zinc-500 transition-colors"
             href="reflections.html"
             >Reflections</a
-          >
+          > -->
         </nav>
         <button
           class="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
@@ -746,20 +747,19 @@
 
     <div class="works-header">
       <h1
-            class="text-3xl lg:text-4xl leading-[1.2] font-medium mb-20 text-zinc-900 max-w-3xl"
+            class="text-3xl lg:text-4xl leading-[1.2] font-medium mb-20 text-zinc-900 max-w-3xl font-family-geist"
           >
           Designing things that feel <br />
           as good as they work
-            >
           </h1>
     </div>
-    <div class="work-grid">
 
+    <div class="work-grid">
         <!-- nexavault -->
-      <div class="work-grid-item">
+      <div class="work-grid-item ">
         <a href="./work/nexavault.html" class="work-media" aria-label="NexaVault"
           >
-          <img class="max-w-none h-full object-contain transition-transform duration-700 group-hover:scale-105" src="assets/nexavault.png" alt="NexaVault app screens"
+          <img class="max-w-none h-full object-contain transition-transform duration-700 group-hover:scale-105" src="assets/Nexavaultimg.png" alt="NexaVault app screens"
         />
     </a>
         <div class="work-caption flex flex-row">
@@ -770,7 +770,7 @@
              prototype</span
             >
           </div>
-          <a class="flex-col" href="work-nexavault.html">Read case study ↗</a>
+          <a class="flex-col" href="./work/nexavault.html">Read case study ↗</a>
         </div>
       </div>
 
@@ -789,6 +789,24 @@
             <span>Cross border payments</span>
           </div>
           <a href="">Read Case Study ↗</a>
+        </div>
+      </div>
+
+      <!-- Echo Capsule -->
+      <div class="work-grid-item">
+        <a target="_blank" href="https://justis.africa" class="work-media" aria-label="Digital Memory Capsule"
+          >
+          <img class="max-w-none h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+          src="assets/Echomvp.png"alt="Echo Capsule">
+      </img>
+          </a
+        >
+        <div class="work-caption">
+          <div class="wtitle">
+            <p>Echo Capsule</p>
+            <span>Digital Memory Capsule</span>
+          </div>
+          <a href="work/echoCapsule.html">Read Case Study ↗</a>
         </div>
       </div>
 
@@ -816,113 +834,91 @@
       <!-- justis -->
       <div class="work-grid-item">
         <a
-          href=""
+        target="_blank" 
+          target="_blank" 
           class="work-media"
           aria-label="Justis Africa">         
           <img class="max-w-none h-full object-contain transition-transform duration-700 group-hover:scale-105" 
-          src="assets/justis.png"alt="Justis Africa Website">
+          src="assets/justis-sm.png"alt="Justis Africa Website">
       </img>
       </a >
         <div class="work-caption">
           <div class="wtitle">
             <p>Justis Africa</p>
-            <span>- Web Design</span>
+            <span>Web Design</span>
           </div>
-          <a target="_blank" href="https://justis.africa">Visit website ↗</a>
+          <a target="_blank" target="_blank" ">Visit website ↗</a>
         </div>
       </div>
 
-      <!-- kiios -->
-      <div class="work-grid-item">
-        <a href="work-kiios.html" class="work-media" aria-label="Mobile POS"
-          >KiiOS business platform mobile and desktop screens</a
-        >
-        <div class="work-caption">
-          <div class="wtitle">
-            <a href="work-kiios.html">Mobile POS</a>
-            <span>- Point of Sale / E-commerce</span>
-          </div>
-        </div>
-      </div>
+      <!-- crypto checkout -->
       <div class="work-grid-item">
         <a
-          href="work-euphoria.html"
-          class="work-media"
-          aria-label="Euphoria Real Estate"
-          >Euphoria building exterior with lush balconies</a
-        >
-        <div class="work-caption">
-          <div class="wtitle">
-            <a href="work-euphoria.html">Euphoria Real Estate</a>
-            <span>- Web Design</span>
-          </div>
-          <a href="work-euphoria.html">Visit website ↗</a>
-        </div>
-      </div>
-      <div class="work-grid-item">
-        <a
-          href="work-crypto-checkout.html"
+          href="https://wewire.com/stablecoins"
+          target="_blank" 
           class="work-media"
           aria-label="Crypto Checkout"
-          >Checkout flow with USDT and USDC payment screens</a
+          >
+          <img class="max-w-none h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+          src="assets/checkout.png"alt="Wewire Crypto Checkout">
+      </img></a
         >
         <div class="work-caption">
           <div class="wtitle">
-            <a href="work-crypto-checkout.html">Crypto Checkout</a>
-            <span>- Stable coin enabled checkout solution</span>
+            <p>Crypto Checkout API</p>
+            <span>Stablecoin enabled solution</span>
           </div>
+          <a target="_blank" href="https://wewire.com/stablecoins">Visit website ↗</a>
         </div>
       </div>
-      <div class="work-grid-item">
-        <a href="work-mosl.html" class="work-media" aria-label="MOSL Energy"
-          >MOSL Energy pipeline photography</a
-        >
-        <div class="work-caption">
-          <div class="wtitle">
-            <a href="work-mosl.html">MOSL Energy</a> <span>- Web Design</span>
-          </div>
-          <a href="work-mosl.html">Visit website ↗</a>
-        </div>
-      </div>
+
+      <!-- threaded tribes -->
       <div class="work-grid-item">
         <a
-          href="work-duston.html"
+        target="_blank"
+          href="https://threadedtribes.com/"
           class="work-media"
-          aria-label="Duston Properties"
-          >Property dashboard and invoice screens</a
+          aria-label="Threaded Tribes"
+          >
+          <img class="max-w-none h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+          src="assets/clothing.png"alt="Wewire Crypto Checkout">
+      </img>
+          </a
         >
         <div class="work-caption">
           <div class="wtitle">
-            <a href="work-duston.html">Duston Properties</a>
-            <span>- Facility management client dashboard</span>
+            <p>Threaded Tribes</p>
+            <span>E-commerce</span>
           </div>
+          <a target="_blank"
+          href="https://threadedtribes.com/">Visit website ↗</a>
         </div>
       </div>
-      <div class="work-grid-item">
-        <a href="work-obya.html" class="work-media" aria-label="Discover Obya"
-          >Obya aircraft wing photography</a
-        >
-        <div class="work-caption">
-          <div class="wtitle">
-            <a href="work-obya.html">Discover Obya</a> <span>- Web Design</span>
-          </div>
-          <a href="work-obya.html">Visit website ↗</a>
-        </div>
-      </div>
+      
+
+       <!-- Mosl -->
       <div class="work-grid-item">
         <a
-          href="work-ecommerce.html"
+        target="_blank"
+          href="https://www.moslafrica.com/"
           class="work-media"
-          aria-label="E-commerce Solution"
-          >Women's clothing store and cart screens</a
+          aria-label="Mosl Africa"
+          >
+          <img class="max-w-none h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+          src="assets/mosl2.png"alt="WMosl Energy">
+      </img>
+          </a
         >
         <div class="work-caption">
           <div class="wtitle">
-            <a href="work-ecommerce.html">E-commerce Solution</a>
-            <span>- Online Clothing Store</span>
+            <p>Mosl Energy</p>
+            <span>Petroleum Distribution Service</span>
           </div>
+          <a target="_blank"
+          href="https://www.moslafrica.com/">Visit website ↗</a>
         </div>
       </div>
+
     </div>
 
     <!-- footer -->
@@ -957,14 +953,14 @@
           class="flex flex-col space-y-2 text-md text-zinc-900 dark:text-zinc-600"
         >
           <a
-            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-600 hover:text-zinc-500 transition-colors"
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-600 hover:text-zinc-500 transition-colors underline font-bold"
             href="https://www.linkedin.com/in/ebi-yaa-kwaw/"
           >
             <span class="material-symbols-outlined text-[20px]"></span>
             LinkedIn
           </a>
           <a
-            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-600 hover:text-zinc-500 transition-colors"
+            class="flex items-center gap-2 text-zinc-900 dark:text-zinc-600 hover:text-zinc-500 transition-colors underline font-bold"
             href="https://dribbble.com/ebiyaa"
           >
             <span class="material-symbols-outlined text-[20px]"></span>
