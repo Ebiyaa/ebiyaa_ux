@@ -76,9 +76,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            /* padding: 22px 48px; */
-            /* border-bottom:1px solid var(--line);
-  position:sticky; */
             top: 0;
             background: var(--paper);
             z-index: 50;
@@ -738,17 +735,26 @@
             aspect-ratio: 1/0.7;
         }
 
+        .avatar-row img {
+            flex: 1 1 160px;
+            min-width: 160px;
+            aspect-ratio: 3/4;
+            height: auto;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
         @media (max-width: 880px) {
             .two-col {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
             }
 
             .sidebar {
-                padding: 40px 24px;
+                padding: 40px 24px !important;
             }
 
             .content {
-                padding: 40px 24px;
+                padding: 40px 24px !important;
             }
 
             .exp-entry,
@@ -767,7 +773,7 @@
             }
 
             .case-media-row {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
             }
 
             .site-header {
@@ -811,12 +817,18 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem !important;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header
-        class="top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-200">
+        class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-200">
         <div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
             <a href="../index.html">
                 <img src="../assets/logo.png" alt="Logo" class="h-8" />
@@ -825,18 +837,33 @@
                 <a class="hover:text-zinc-500 transition-colors" href="../index.html">Home</a>
                 <a class="hover:text-zinc-500 transition-colors" href="../work.html">Works</a>
                 <a class="hover:text-zinc-500 transition-colors" href="../about.html">About me</a>
-                <!-- <a class="hover:text-zinc-500 transition-colors" href="../reflections.html">Reflections</a> -->
             </nav>
             <a href="mailto:ebiyaakwaw@gmail.com"
                 class="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors inline-block"
               >
                 Let's talk
               </a>
-            <button class="md:hidden">
+            <button
+                class="md:hidden"
+                aria-label="Toggle menu"
+                aria-expanded="false"
+                onclick="const m=document.getElementById('mobile-menu');const open=m.classList.toggle('hidden');this.setAttribute('aria-expanded', String(!open));this.querySelector('.material-symbols-outlined').textContent = open ? 'menu' : 'close';"
+            >
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </div>
+        <div
+            id="mobile-menu"
+            class="hidden md:hidden flex flex-col border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background-dark px-6 py-2"
+        >
+            <a class="py-3 border-b border-zinc-100 dark:border-zinc-800 text-sm font-medium" href="../index.html">Home</a>
+            <a class="py-3 border-b border-zinc-100 dark:border-zinc-800 text-sm font-medium" href="../work.html">Works</a>
+            <a class="py-3 border-b border-zinc-100 dark:border-zinc-800 text-sm font-medium" href="../about.html">About me</a>
+            <a class="py-3 text-sm font-medium" href="mailto:ebiyaakwaw@gmail.com">Let's talk</a>
+        </div>
     </header>
+
+    <div style="height: 80px;"></div>
 
     <div class="two-col" style="
         box-sizing: border-box;
@@ -904,7 +931,7 @@
               font-size: 0.92rem;
               color: #333;
             ">
-                    Digital legacy & memory preservation
+                    Digital legacy &amp; memory preservation
 
                 </div>
                 <div class="case-tag" style="
@@ -923,7 +950,7 @@
               font-size: 0.92rem;
               color: #333;
             ">
-                    Figma prototyping & HTML/CSS build
+                    Figma prototyping &amp; HTML/CSS build
                 </div>
 
             </div>
@@ -951,14 +978,16 @@
             </div>
         </aside>
         <main class="content" style="box-sizing: border-box; padding: 64px 56px">
-            <h4 class="case-h2" style="
+            <h4
+          style="
             box-sizing: border-box;
             font-size: 1.15rem;
-            margin: 38px 0 14px;
             font-weight: 600;
-          ">
-                Background
-            </h4>
+            margin-bottom: 16px;
+          "
+        >
+          Background
+        </h4>
             <p style="box-sizing: border-box; margin: 0 0 1em 0">
                 Echo Capsule is a mobile app concept for preserving personal memories
                 such as photos, audio, video, and written messages, inside digital
@@ -1045,23 +1074,23 @@
             <p style="box-sizing: border-box; margin: 0 0 1em 0" class="max-w-3xl">
                 We used Nielsen's ten usability heuristics throughout, weighting three most
                 heavily given the emotional stakes of the content:
-            <ul>
+            </p>
+            <ul style="box-sizing: border-box; margin: 0 0 1em 0; padding-left: 18px;" class="max-w-3xl">
                 <li>
                     <strong>Error prevention:</strong> Deleting a sealed capsule containing legacy messages is a
                     serious, often
                     irreversible loss as a destructive action had to be made deliberately difficult and recoverable.
                 </li>
                 <li>
-                    <strong>User control & freedom:</strong> Users needed full agency to edit conditions,
+                    <strong>User control &amp; freedom:</strong> Users needed full agency to edit conditions,
                     reschedule, or delete content any time before a capsule was sealed.
                 </li>
                 <li>
-                    <strong>Aesthetic & minimalist design:</strong> The interface had to stay out of the way of the
+                    <strong>Aesthetic &amp; minimalist design:</strong> The interface had to stay out of the way of the
                     content's
                     emotional weight, never being decorative for its own sake.
                 </li>
             </ul>
-            </p>
 
             <h4 class="case-h2"
                 style=" box-sizing: border-box; font-size: 1.15rem; margin: 38px 0 14px; font-weight: 600;">
@@ -1127,7 +1156,7 @@
             margin: 38px 0 14px;
             font-weight: 600;
           ">
-                User Flow & Navigation
+                User Flow &amp; Navigation
             </h4>
             <p style="box-sizing: border-box; margin: 0 0 1em 0" class="max-w-3xl">
                 We mapped two full navigation trees: authentication (sign up, social
@@ -1218,7 +1247,7 @@
             background-repeat: no-repeat;
           "></div>
 
-            <div class="flex flex-row gap-12 mt-4">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-12 mt-4">
                 <a class="font-bold underline" href="https://www.figma.com/proto/7WsGDDZ7HQlyaxYYdWb487/Echo-Capsule-Mobile-Design?node-id=2008-913&p=f&viewport=344%2C-76%2C0.05&t=VcwYHdXpysdOWyyS-1&scaling=scale-down&content-scaling=fixed&page-id=13%3A4588">View Figma Prototype ↗</a>
                 <a class="font-bold underline" href="https://thadlubo.github.io/echo-capsule/">Try the interactive HTML/CSS prototype ↗</a>
             </div>
@@ -1229,7 +1258,7 @@
             margin: 38px 0 14px;
             font-weight: 600;
           ">
-                Interactive Prototype & Tech Choices
+                Interactive Prototype &amp; Tech Choices
             </h4>
             <p style="box-sizing: border-box; margin: 0 0 1em 0">
                 After Figma, we built a working interactive version in HTML5, CSS3 and vanilla
@@ -1246,7 +1275,7 @@
                 feature planned for future iterations.
             </p>
 
-            <div style="
+            <div class="avatar-row" style="
             box-sizing: border-box;
             border-radius: 6px;
             overflow: hidden;
@@ -1260,10 +1289,10 @@
             justify-content: center;
             gap: 16px;
           ">
-                <img style="flex: 1 1 0; min-width: 0; height: 300px; object-fit: cover;" src="../assets/ebiAvatar.jpeg" alt="">
-                <img style="flex: 1 1 0; min-width: 0; height: 300px; object-fit: cover;" src="../assets/nimraAvatar.jpeg" alt="">
-                <img style="flex: 1 1 0; min-width: 0; height: 300px; object-fit: cover;" src="../assets/thadAvatar.jpeg" alt="">
-                <img style="flex: 1 1 0; min-width: 0; height: 300px; object-fit: cover;" src="../assets/yushanAvatar.jpeg" alt="">
+                <img src="../assets/ebiAvatar.jpeg" alt="">
+                <img src="../assets/nimraAvatar.jpeg" alt="">
+                <img src="../assets/thadAvatar.jpeg" alt="">
+                <img src="../assets/yushanAvatar.jpeg" alt="">
             </div>
 
             <h4 class="case-h2" style="
@@ -1342,8 +1371,8 @@
     </div>
 
     <!-- footer -->
-    <footer class="border-t bg-white dark:bg-background-dark py-12 px-12">
-        <div class="max-w-[1440px] mx-auto flex flex-row items-start gap-40">
+    <footer class="border-t bg-white dark:bg-background-dark py-10 px-6 md:py-12 md:px-12">
+        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-16 lg:gap-40">
             <div class="space-y-2 flex flex-row gap-10 items-center">
                 <a href="#">
                     <img src="../assets/logo.png" alt="Logo" class="h-8" />

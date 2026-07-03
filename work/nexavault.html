@@ -649,13 +649,13 @@
 
       @media (max-width: 880px) {
         .two-col {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr !important;
         }
         .sidebar {
-          padding: 40px 24px;
+          padding: 40px 24px !important;
         }
         .content {
-          padding: 40px 24px;
+          padding: 40px 24px !important;
         }
         .exp-entry,
         .cert-entry {
@@ -670,7 +670,7 @@
           grid-template-columns: repeat(2, 1fr);
         }
         .case-media-row {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr !important;
         }
         .site-header {
           padding: 18px 20px;
@@ -706,11 +706,16 @@
           grid-template-columns: 1fr;
         }
       }
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.5rem !important;
+        }
+      }
     </style>
   </head>
   <body>
     <header
-      class="top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-200"
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-200"
     >
       <div
         class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between"
@@ -728,22 +733,33 @@
           <a class="hover:text-zinc-500 transition-colors" href="../about.html"
             >About me</a
           >
-          <!-- <a
-            class="hover:text-zinc-500 transition-colors"
-            href="../reflections.html"
-            >Reflections</a
-          > -->
         </nav>
         <button
           class="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
         >
           <a href="mailto:ebiyaakwaw@gmail.com">Let's talk</a>
         </button>
-        <button class="md:hidden">
+        <button
+          class="md:hidden"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          onclick="const m=document.getElementById('mobile-menu');const open=m.classList.toggle('hidden');this.setAttribute('aria-expanded', String(!open));this.querySelector('.material-symbols-outlined').textContent = open ? 'menu' : 'close';"
+        >
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background-dark px-6 py-2"
+      >
+        <a class="py-3 border-b border-zinc-100 dark:border-zinc-800 text-sm font-medium" href="../index.html">Home</a>
+        <a class="py-3 border-b border-zinc-100 dark:border-zinc-800 text-sm font-medium" href="../work.html">Works</a>
+        <a class="py-3 border-b border-zinc-100 dark:border-zinc-800 text-sm font-medium" href="../about.html">About me</a>
+        <a class="py-3 text-sm font-medium" href="mailto:ebiyaakwaw@gmail.com">Let's talk</a>
+      </div>
     </header>
+
+    <div style="height: 80px;"></div>
 
     <div
       class="two-col"
@@ -850,7 +866,7 @@
               color: #333;
             "
           >
-            Cultural probes & UX research
+            Cultural probes &amp; UX research
           </div>
           <div
             class="case-tag"
@@ -874,7 +890,7 @@
               color: #333;
             "
           >
-            Prototyping & usability heuristics
+            Prototyping &amp; usability heuristics
           </div>
         </div>
         <div
@@ -1301,8 +1317,8 @@
     </div>
 
     <!-- footer -->
-    <footer class="border-t bg-white dark:bg-background-dark py-12 px-12">
-      <div class="max-w-[1440px] mx-auto flex flex-row items-start gap-40">
+    <footer class="border-t bg-white dark:bg-background-dark py-10 px-6 md:py-12 md:px-12">
+      <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-16 lg:gap-40">
         <div class="space-y-2 flex flex-row gap-10 items-center">
           <a href="#">
             <img src="../assets/logo.png" alt="Logo" class="h-8" />

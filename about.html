@@ -68,6 +68,15 @@
       /* room for scrollbar so it doesn't clip content */
     }
 
+    @media (max-width: 640px) {
+      .case-scroll {
+        flex-direction: column;
+        overflow-x: visible;
+        overflow-y: visible;
+        scroll-snap-type: none;
+      }
+    }
+
     .case-card {
       flex: 0 0 auto;
       scroll-snap-align: start;
@@ -134,9 +143,23 @@
         class="bg-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
         <a href="mailto:ebiyaakwaw@gmail.com">Let's talk</a>
       </button>
-      <button class="md:hidden">
+      <button
+        class="md:hidden"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        onclick="const m=document.getElementById('mobile-menu');const open=m.classList.toggle('hidden');this.setAttribute('aria-expanded', String(!open));this.querySelector('.material-symbols-outlined').textContent = open ? 'menu' : 'close';"
+      >
         <span class="material-symbols-outlined">menu</span>
       </button>
+    </div>
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden flex flex-col border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background-dark px-6 py-2"
+    >
+      <a class="py-3 border-b border-zinc-100 dark:border-zinc-800 text-sm font-medium" href="index.html">Home</a>
+      <a class="py-3 border-b border-zinc-100 dark:border-zinc-800 text-sm font-medium" href="work.html">Works</a>
+      <a class="py-3 border-b border-zinc-100 dark:border-zinc-800 text-sm font-medium" href="#">About me</a>
+      <a class="py-3 text-sm font-medium" href="mailto:ebiyaakwaw@gmail.com">Let's talk</a>
     </div>
   </header>
 
@@ -227,9 +250,9 @@
         </div>
       </div>
       <div class="mt-20">
-        <div class="flex justify-between items-end mb-8 border-b border-gray-300 dark:border-gray-700 pb-4">
-          <h3 class="text-3xl">Experience</h3>
-          <a class="text-md font-medium flex items-center hover:underline" target="_blank"
+        <div class="flex justify-between items-end mb-8 border-b border-gray-300 dark:border-gray-700 pb-4 sm:flex flex-col gap-2 justify-items-start w-full">
+          <h3 class="text-3xl w-full">Experience</h3>
+          <a class="text-md font-medium flex items-center hover:underline w-full" target="_blank"
             href="https://drive.google.com/file/d/1fpn0-iWDYulQPNGfYf3KbY9NTP0BHD7q/view?usp=sharing">
             Download resume
             <span class="material-symbols-outlined ml-1">download</span>
@@ -411,7 +434,7 @@
           Side quests and spaces<br />I’ve featured in
         </h3>
 
-        <div class="flex flex-row w-full gap-4 align-items-center justify-start case-scroll height-[370px] overflow-hidden">
+        <div class="flex flex-row w-full gap-4 items-center justify-start case-scroll sm:flex-row  overflow-hidden h-auto sm:overflow-x-auto sm:scroll-behavior-horizontal"> ">
           <!-- Wewire instagram -->
           <div class="dark:bg-sidebar-dark rounded-md relative group">
             <blockquote
@@ -420,8 +443,9 @@
               data-instgrm-version="14" style="
                   background: #fff;
                   margin: 1rem auto;
-                  min-width: 320px;
-                  width: 540px;
+                  min-width: 280px;
+                  width: 100%;
+                  max-width: 540px;
                   min-height: 200px;
                   height: 400px;
                   border-radius: 16px;
@@ -431,9 +455,9 @@
 
           <!-- test -->
           <div style=" background: #fff;
-          margin: 1rem auto;
-          min-width: 320px;
-          width: 540px;
+          min-width: 280px;
+          width: 100%;
+          max-width: 540px;
           min-height: 200px;
           height: 400px;
           border-radius: 16px;
@@ -441,7 +465,7 @@
             <a target="_blank" href="https://youtu.be/yIyGy3mxuMI?si=7CBM6Ji4vGBmD9In" class="work-media"
               aria-label="NexaVault">
               <img
-                class="max-w-none h-full object-cover position-center transition-transform duration-700 group-hover:scale-105 "
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 "
                 src="assets/building-bytes.jpg" alt="NexaVault app screens" />
             </a>
 
@@ -452,8 +476,8 @@
 
     </section>
   </main>
-  <footer class="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background-dark py-12 px-12">
-    <div class="max-w-[1440px] mx-auto flex flex-row items-start gap-40">
+  <footer class="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background-dark py-10 px-6 md:py-12 md:px-12">
+    <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-16 lg:gap-40">
       <div class="space-y-2 flex flex-row gap-10 items-center">
         <a href="#">
           <img src="./assets/logo.png" alt="Logo" class="h-8" />
